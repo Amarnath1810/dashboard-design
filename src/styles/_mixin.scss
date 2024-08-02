@@ -1,0 +1,108 @@
+$colors: (
+    ap_black:#212121,
+    ap_lite_black:#1f2029,
+    ap_white:#fff,
+    ap_gray_lgt: #F5F7F9,
+    ap_gray_text: #67748e,
+    ap_gray_border: darken(#F5F7F9, 2.5),
+    ap_table_head: darken(#F5F7F9, 5),
+    ap_primary: #1B5AFE,
+    ap_black_accent:#475569,
+    ap_blue:#3881D6,
+    ap_lite_blue:#7295fe,
+    ap_green:#43be4b,
+    pp_pink:#EC2B95,
+    pp_white:#FFFFFF,
+    pp_dark:#2c2524,
+    ap_gray:#817d7d,
+    ap_border:#e0dbdb,
+    ap_text:#54595F,
+    ap_lable:#171717,
+    ap_title:#195579,
+    ap_lgt_black:#292929,
+    ap_icon:#1B1B1B,
+    ap_lemon:#C7FF24,
+    gray_lgt:#a0a0a0,
+    ap_skyBlue: #f4f4f4,
+    ap_btn_black:#222222,
+    error:red,
+    ap_red_light:#f5486507,
+    ap_green_light:#00ff0010,
+);
+
+
+@mixin xs {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 550px) {
+        @content;
+    }
+}
+
+@mixin min-mobile {
+
+    @media (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mini-tab {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mini-desk {
+    @media (max-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin desk {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin fourk {
+    @media (min-width: 2200px) {
+        @content;
+    }
+}
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+
+@mixin dashboard_container {
+    max-width: 1440px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
+

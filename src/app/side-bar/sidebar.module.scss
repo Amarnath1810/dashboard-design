@@ -1,0 +1,31 @@
+@import '../../styles/_mixin.scss';
+
+
+
+.main {
+    display: flex;
+
+    .container {
+        background-color: color(ap_lite_black);
+        height: calc(100vh - 7vh) ;
+        padding: 20px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 7vh;
+
+        .icons {
+            padding-bottom: 30px;
+        }
+        .log_out_btn{
+           z-index: 9999;
+        }
+    }
+
+    main {
+        margin-left: 60px; 
+        width: calc(100% - 60px); 
+        position: relative;
+    }
+}
