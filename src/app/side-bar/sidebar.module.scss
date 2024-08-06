@@ -6,14 +6,14 @@
     display: flex;
 
     .container {
+        height: calc(100vh - 60px) ;
         background-color: color(ap_lite_black);
-        height: calc(100vh - 7vh) ;
         padding: 20px;
         position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        top: 7vh;
+        top: 60px;
 
         .icons {
             padding-bottom: 30px;
@@ -26,6 +26,13 @@
     main {
         margin-left: 60px; 
         width: calc(100% - 60px); 
+        padding-top: 60px; // Add padding-top to avoid content going under the header
+        height: calc(100vh - 60px); // Adjust height to fit within viewport
         position: relative;
+        overflow: auto; // Optional: Add scroll if content overflows
+    }
+    
+    .left {
+        height: 100%; // Adjust to full height since main already considers the header height
     }
 }

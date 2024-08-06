@@ -30,7 +30,7 @@ const SideBar = ({ children }) => {
                         <LogoutIcon height={"20px"} width={"20px"} fill={"#7295fe"} />
                     </div>
                 </div>
-                <main>
+                <main className={styles.left}>
                     {children}
                 </main>
             </div>

@@ -9,5 +9,66 @@
     height: 60px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
 
+    .header_wrap {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        .search_wrap {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+            background-color: color(ap_black) ;
+            height: 35px;
+            width: 250px;
+            border: 1px solid rgb(117, 116, 116);
+            border-radius: 6px;
+           
+            .search_icon {
+                padding: 0px 10px;
+            }
+            .header_text_input {
+                border: none;
+                outline: none;
+                color:white;
+                background-color: color(ap_black) ;
+                width: 100%;
+            }
+        }
+    }
+    .profile_wrap {
+        display: flex;
+        align-items: center;
+        .user_pf {
+            height: 36px;
+            width: 36px;
+            .user_img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .header_icon_wrap {
+                display: flex;
+                align-items: center;
+
+                @include  min-mobile {
+                    display: none;
+                }
+
+            .hedaer_left_icon {
+                margin-right: 20px;
+                background-color: #5c5d61;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
 }

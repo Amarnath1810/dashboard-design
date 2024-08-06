@@ -4,6 +4,10 @@
     padding: 20px;
     background-color: black;
     width: 100%;
+ 
+    .container_wrap {
+        height: calc( 100% - 60px);
+    }
 
     .dashboard_title {
         font-size: 22px;
@@ -17,14 +21,20 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .dashboard_right {
             width: 58%;
+            
+            @include mobile {
+                width: 100%;
+            }
 
             .dashboard_counter_cards {
                 display: flex;
                 width: calc(100% + 30px);
                 margin-left: -15px;
+                flex-wrap: wrap;
 
                 .couter_cards {
                     background-color: color(ap_lite_black);
@@ -32,6 +42,9 @@
                     margin: 15px;
                     padding: 15px;
                     border-radius: 5px;
+                    @include tab {
+                        width: calc(100%/2 - 30px);
+                    }
 
                     .counter_logo {
                         height: 40px;
@@ -105,6 +118,7 @@
                         background-color: rgba(60,64,67,.8);
                         padding: 5px 10px;
                         border-radius: 20px;
+                        border: none;
 
                         .btn_text {
                             color: color(ap_white);
@@ -207,6 +221,10 @@
             width: 40%;
             padding-top: 15px;
 
+            @include mobile {
+                width: 100%;
+            }
+
             .profit_card {
                 background-color: color(ap_lite_black);
                 padding: 20px;
@@ -307,6 +325,10 @@
                 margin-top: 23px;
                 max-height: 480px;
                 overflow-y: auto;
+
+                @include tab {
+                    max-height: 100%;
+                }
             
                 &::-webkit-scrollbar {
                     width: 10px; 

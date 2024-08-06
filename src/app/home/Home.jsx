@@ -34,6 +34,7 @@ import CustomProgressCircle from '../../components/custom-range-circle/CustomPro
 const Home = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.container_wrap}>
             <div>
                 <p className={styles.dashboard_title}>Dashboard</p>
             </div>
@@ -164,6 +165,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     );
 }
@@ -256,7 +258,8 @@ const ordersData = [
         amount: "$120.00",
         status: "Delivered",
         imgs: Imagethree
-    }
+    },
+    
 ];
 
 const ProfitCard = [
