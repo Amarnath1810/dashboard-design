@@ -35,136 +35,136 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <div className={styles.container_wrap}>
-            <div>
-                <p className={styles.dashboard_title}>Dashboard</p>
-            </div>
-            <div className={styles.dashboard_content}>
-                <div className={styles.dashboard_right}>
-                    <div className={styles.dashboard_counter_cards}>
-                        {
-                            CardsData.map((item) => {
-                                return (
-                                    <div className={styles.couter_cards}>
-                                        <DashBoardCards
-                                            {
+                <div>
+                    <p className={styles.dashboard_title}>Dashboard</p>
+                </div>
+                <div className={styles.dashboard_content}>
+                    <div className={styles.dashboard_right}>
+                        <div className={styles.dashboard_counter_cards}>
+                            {
+                                CardsData.map((item) => {
+                                    return (
+                                        <div className={styles.couter_cards}>
+                                            <DashBoardCards
+                                                {
                                                 ...{
                                                     item,
                                                     styles
                                                 }
-                                            }
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                    <div className={styles.activity_catrt_area}>
-                        <div className={styles.activity_chart_title_area}>
-                            <p className={styles.title}>Activity</p>
-                            <div className={styles.activity_select_list}>
-                                <button className={styles.activity_select_btn}>
-                                    <span className={styles.btn_text}>
-                                        Weekly
-                                    </span>
-                                    <div>
-                                        <CaretDownIcon height={"15px"} width={"15px"} fill={"white"} />
-                                    </div>
-                                </button>
-                            </div>
+                                                }
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
-                        <ActivityChart />
-                    </div>
-                    <div className={styles.order_table}>
-                        <p className={styles.title}>Recent Orders</p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Customers</th>
-                                    <th>Order No</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    ordersData.map((item) => {
-                                        return (
-                                            <Orders
-                                                {
+                        <div className={styles.activity_catrt_area}>
+                            <div className={styles.activity_chart_title_area}>
+                                <p className={styles.title}>Activity</p>
+                                <div className={styles.activity_select_list}>
+                                    <button className={styles.activity_select_btn}>
+                                        <span className={styles.btn_text}>
+                                            Weekly
+                                        </span>
+                                        <div>
+                                            <CaretDownIcon height={"15px"} width={"15px"} fill={"white"} />
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <ActivityChart />
+                        </div>
+                        <div className={styles.order_table}>
+                            <p className={styles.title}>Recent Orders</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Customers</th>
+                                        <th>Order No</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        ordersData.map((item) => {
+                                            return (
+                                                <Orders
+                                                    {
                                                     ...{
                                                         item,
                                                         styles
                                                     }
-                                                }
-                                            />
-                                        )
-                                    })
-                                }
-                            </tbody>
-                        </table>
+                                                    }
+                                                />
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.dashboard_left}>
-                    <div>
-                        {
-                            ProfitCard.map((item) => {
-                                return (
-                                    <div className={styles.profit_card}>
-                                        <div>
-                                            <p className={styles.profit_card_title}>{item.title}</p>
-                                            <p className={styles.profit_count_txt}>{item.count}</p>
-                                            <p className={styles.profit_value}>{item.value}</p>
-                                        </div>
-                                        <div className={styles.profit_bar}>
+                    <div className={styles.dashboard_left}>
+                        <div>
+                            {
+                                ProfitCard.map((item) => {
+                                    return (
+                                        <div className={styles.profit_card}>
                                             <div>
-                                                <CustomProgressCircle/>
+                                                <p className={styles.profit_card_title}>{item.title}</p>
+                                                <p className={styles.profit_count_txt}>{item.count}</p>
+                                                <p className={styles.profit_value}>{item.value}</p>
                                             </div>
-                                            <div>
-                                                <p className={styles.profit_caption}>*The values here has been rounded off</p>
+                                            <div className={styles.profit_bar}>
+                                                <div>
+                                                    <CustomProgressCircle />
+                                                </div>
+                                                <div>
+                                                    <p className={styles.profit_caption}>*The values here has been rounded off</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                    <div className={styles.list_cards}>
-                        {
-                            ListData.map((item) => {
-                                return (
-                                    <ListCards
-                                        {
+                                    )
+                                })
+                            }
+                        </div>
+                        <div className={styles.list_cards}>
+                            {
+                                ListData.map((item) => {
+                                    return (
+                                        <ListCards
+                                            {
                                             ...{
                                                 item,
                                                 styles
                                             }
-                                        }
-                                    />
-                                )
-                            })
-                        }
-                    </div>
-                    <div className={styles.custmer_feedback_wrap}>
-                        <p className={styles.title_text}>Customers Feedback</p>
-                        <div className={styles.customer_list}>
-                            {
-                                CustomersData.map((item) => {
-                                    return (
-                                        <FeedBack
-                                            {
-                                                ...{
-                                                    item,
-                                                    styles
-                                                }
                                             }
                                         />
                                     )
                                 })
                             }
                         </div>
+                        <div className={styles.custmer_feedback_wrap}>
+                            <p className={styles.title_text}>Customers Feedback</p>
+                            <div className={styles.customer_list}>
+                                {
+                                    CustomersData.map((item) => {
+                                        return (
+                                            <FeedBack
+                                                {
+                                                ...{
+                                                    item,
+                                                    styles
+                                                }
+                                                }
+                                            />
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     );
@@ -259,7 +259,7 @@ const ordersData = [
         status: "Delivered",
         imgs: Imagethree
     },
-    
+
 ];
 
 const ProfitCard = [
